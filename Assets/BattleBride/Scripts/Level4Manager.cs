@@ -175,6 +175,7 @@ namespace MoreMountains.CorgiEngine
             switch (eventType)
             {
                 case CorgiEngineEventTypes.Respawn:
+                    Debug.Log("Respawning 4");
                     CallBackAll();
                     boss4Spawner.StopSpawnerCoroutine();
                     break;

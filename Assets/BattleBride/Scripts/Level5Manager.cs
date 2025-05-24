@@ -142,6 +142,7 @@ namespace MoreMountains.CorgiEngine
             switch (eventName)
             {
                 case CorgiEngineEventTypes.Respawn:
+                    Debug.Log("Respawning 5");
                     ResetTentaclesChallenge();
                     break;
             }

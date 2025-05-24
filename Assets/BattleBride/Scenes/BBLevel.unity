@@ -5048,7 +5048,7 @@ MonoBehaviour:
   - {fileID: 6769584392560929917, guid: b630544fe7657bc49b9381e35a25604e, type: 3}
   AutoAttributePlayerIDs: 1
   SceneCharacters: []
-  DebugSpawn: {fileID: 1587436930}
+  DebugSpawn: {fileID: 805141990}
   CheckpointAttributionAxis: 0
   CheckpointAttributionDirection: 0
   CurrentCheckPoint: {fileID: 0}
@@ -5095,7 +5095,7 @@ MonoBehaviour:
     m_Extent: {x: 347.31, y: 47.7, z: 5}
   ConvertToColliderBoundsButton: 0
   LoadingSceneMode: 1
-  LoadingSceneName: LoadingScreen
+  LoadingSceneName: BBLoadingScreen
   AdditiveLoadingSettings:
     LoadingSceneName: MMAdditiveLoadingScreen
     ThreadPriority: 4
@@ -49416,18 +49416,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb3b6d4417d74a1478d4387d80804c61, type: 3}
---- !u!114 &1587436930 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 11400000, guid: 7a343ffc127af4b41b1e509d55d21956,
-    type: 3}
-  m_PrefabInstance: {fileID: 920433731}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 923a01d66c4618446abb082250646478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1590983731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51797,6 +51785,10 @@ PrefabInstance:
     - target: {fileID: 490956, guid: 6059d977d1f210348bfbe1a82f4f9883, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489144, guid: 6059d977d1f210348bfbe1a82f4f9883, type: 3}
+      propertyPath: GameOverScene
+      value: BBGameOver
       objectReference: {fileID: 0}
     - target: {fileID: 114992019002501916, guid: 6059d977d1f210348bfbe1a82f4f9883,
         type: 3}
@@ -61306,7 +61298,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1444376685}
+      objectReference: {fileID: 1856111172513498011}
     - target: {fileID: 7184150461268161219, guid: e9282b86359eeba42b91a3bff33f217c,
         type: 3}
       propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -61315,12 +61307,12 @@ PrefabInstance:
     - target: {fileID: 7184150461268161219, guid: e9282b86359eeba42b91a3bff33f217c,
         type: 3}
       propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: KilledBossEnemy
+      value: Boss4OnDeath
       objectReference: {fileID: 0}
     - target: {fileID: 7184150461268161219, guid: e9282b86359eeba42b91a3bff33f217c,
         type: 3}
       propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MoreMountains.CorgiEngine.Level4Manager, Assembly-CSharp
+      value: MoreMountains.CorgiEngine.Boss4, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7184150461268161219, guid: e9282b86359eeba42b91a3bff33f217c,
         type: 3}
@@ -61336,7 +61328,42 @@ PrefabInstance:
         type: 3}
       propertyPath: 'Feedbacks.Array.data[2]'
       value: 
-      objectReference: {fileID: 778468228}
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442553142834937044, guid: e9282b86359eeba42b91a3bff33f217c,
+        type: 3}
+      propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442553142834937044, guid: e9282b86359eeba42b91a3bff33f217c,
+        type: 3}
+      propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442553142834937044, guid: e9282b86359eeba42b91a3bff33f217c,
+        type: 3}
+      propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1856111172513498011}
+    - target: {fileID: 7442553142834937044, guid: e9282b86359eeba42b91a3bff33f217c,
+        type: 3}
+      propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442553142834937044, guid: e9282b86359eeba42b91a3bff33f217c,
+        type: 3}
+      propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Boss4OnHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442553142834937044, guid: e9282b86359eeba42b91a3bff33f217c,
+        type: 3}
+      propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoreMountains.CorgiEngine.Boss4, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442553142834937044, guid: e9282b86359eeba42b91a3bff33f217c,
+        type: 3}
+      propertyPath: Events.OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61352,6 +61379,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1856111172513498009}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1856111172513498011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4097628036066042798, guid: e9282b86359eeba42b91a3bff33f217c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1856111172513498009}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90826690573c54bba712b5ab514fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1882301017254513752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64080,7 +64119,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'Feedbacks.Array.data[1]'
       value: 
-      objectReference: {fileID: 3562161713099706281}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
