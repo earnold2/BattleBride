@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: feea0833f5d0788489c3b4eb8b4182b6
+  productGUID: be0665b675e560d4a89f55001c560280
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -165,7 +165,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Standalone: com.DefaultCompany.Battle-Bride-Renewed-Vows
+    Standalone: com.MoreMountains.CorgiEngine
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -799,16 +799,16 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: BattleBrideRenewedVows
-  metroPackageVersion: 1.0.0.0
+  metroPackageName: BattleBride
+  metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Battle Bride Renewed Vows
+  metroApplicationDescription: BattleBride
   wsaImages: {}
-  metroTileShortName: Battle Bride Renewed Vows
+  metroTileShortName: 
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
