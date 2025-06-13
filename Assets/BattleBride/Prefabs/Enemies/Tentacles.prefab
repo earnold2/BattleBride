@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 2229319077274084484}
   - component: {fileID: 7790858768520846381}
   - component: {fileID: 7811656115289320922}
+  - component: {fileID: 6437484229489782657}
   m_Layer: 0
   m_Name: Tentacles
   m_TagString: Untagged
@@ -184,7 +185,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.47117615}
+  m_Offset: {x: 0, y: -1.8314838}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -194,7 +195,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 23.97173, y: 1.9423523}
+  m_Size: {x: 23.97173, y: 4.6629677}
   m_EdgeRadius: 0
 --- !u!114 &7790858768520846381
 MonoBehaviour:
@@ -261,6 +262,28 @@ MonoBehaviour:
   HitNonDamageableFeedback: {fileID: 0}
   FreezeFramesOnHitDuration: 0
   Owner: {fileID: 0}
+--- !u!114 &6437484229489782657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498733919803756486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1508296b0904b1ba069c225eb6482a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RespawnOnPlayerRespawn: 0
+  RepositionToInitOnPlayerRespawn: 0
+  DisableOnKill: 0
+  DisableModelOnKill: 1
+  AutoRespawnDuration: 0
+  AutoRespawnAmount: 3
+  AutoRespawnRemainingAmount: 3
+  IgnoreCheckpointsAlwaysRespawn: 1
+  AssociatedCheckpoints: []
+  RespawnFeedback: {fileID: 0}
 --- !u!1 &1083097346875144429
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +608,19 @@ MonoBehaviour:
     TriggerUnityEvents: 1
     OnPlay:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: MoreMountains.CorgiEngine.Level5Manager, Assembly-CSharp
+          m_MethodName: IcicleCrash
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnPause:
       m_PersistentCalls:
         m_Calls: []
@@ -780,6 +815,7 @@ GameObject:
   - component: {fileID: 2314698029199321384}
   - component: {fileID: 8539715230523495359}
   - component: {fileID: 5166686666939389722}
+  - component: {fileID: 5374667671937202272}
   m_Layer: 0
   m_Name: Tentacle1
   m_TagString: Untagged
@@ -926,12 +962,12 @@ MonoBehaviour:
   ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
   DeathFeedbacks: {fileID: 2045777878275358723}
-  DestroyOnDeath: 1
+  DestroyOnDeath: 0
   DelayBeforeDestruction: 0
   CollisionsOffOnDeath: 1
   GravityOffOnDeath: 0
   PointsWhenDestroyed: 0
-  RespawnAtInitialLocation: 0
+  RespawnAtInitialLocation: 1
   ApplyDeathForce: 1
   DeathForce: {x: 0, y: 10}
   ResetForcesOnDeath: 0
@@ -1011,6 +1047,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5374667671937202272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2902791869912487173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1508296b0904b1ba069c225eb6482a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RespawnOnPlayerRespawn: 0
+  RepositionToInitOnPlayerRespawn: 1
+  DisableOnKill: 1
+  DisableModelOnKill: 1
+  AutoRespawnDuration: 0
+  AutoRespawnAmount: 3
+  AutoRespawnRemainingAmount: 3
+  IgnoreCheckpointsAlwaysRespawn: 1
+  AssociatedCheckpoints: []
+  RespawnFeedback: {fileID: 0}
 --- !u!1 &3022867077961601338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1305,7 @@ GameObject:
   - component: {fileID: 3907970615840665624}
   - component: {fileID: 2327096993823151503}
   - component: {fileID: 7689766561591984489}
+  - component: {fileID: 7580507586514592572}
   m_Layer: 0
   m_Name: Tentacle2
   m_TagString: Untagged
@@ -1393,12 +1452,12 @@ MonoBehaviour:
   ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
   DeathFeedbacks: {fileID: 2155367141411558756}
-  DestroyOnDeath: 1
+  DestroyOnDeath: 0
   DelayBeforeDestruction: 0
   CollisionsOffOnDeath: 1
   GravityOffOnDeath: 0
   PointsWhenDestroyed: 0
-  RespawnAtInitialLocation: 0
+  RespawnAtInitialLocation: 1
   ApplyDeathForce: 1
   DeathForce: {x: 0, y: 10}
   ResetForcesOnDeath: 0
@@ -1478,6 +1537,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7580507586514592572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512170796216718741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1508296b0904b1ba069c225eb6482a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RespawnOnPlayerRespawn: 0
+  RepositionToInitOnPlayerRespawn: 1
+  DisableOnKill: 0
+  DisableModelOnKill: 1
+  AutoRespawnDuration: 0
+  AutoRespawnAmount: 3
+  AutoRespawnRemainingAmount: 3
+  IgnoreCheckpointsAlwaysRespawn: 1
+  AssociatedCheckpoints: []
+  RespawnFeedback: {fileID: 0}
 --- !u!1 &6712645191474502601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,7 +1772,19 @@ MonoBehaviour:
     TriggerUnityEvents: 1
     OnPlay:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: MoreMountains.CorgiEngine.Level5Manager, Assembly-CSharp
+          m_MethodName: IcicleCrash
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnPause:
       m_PersistentCalls:
         m_Calls: []
@@ -1735,6 +1828,7 @@ GameObject:
   - component: {fileID: 7628685178966961619}
   - component: {fileID: 2277144623077163288}
   - component: {fileID: 7963967109073317908}
+  - component: {fileID: 625086455510749243}
   m_Layer: 0
   m_Name: Tentacle3
   m_TagString: Untagged
@@ -1881,12 +1975,12 @@ MonoBehaviour:
   ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
   DeathFeedbacks: {fileID: 9078356439788531323}
-  DestroyOnDeath: 1
+  DestroyOnDeath: 0
   DelayBeforeDestruction: 0
   CollisionsOffOnDeath: 1
   GravityOffOnDeath: 0
   PointsWhenDestroyed: 0
-  RespawnAtInitialLocation: 0
+  RespawnAtInitialLocation: 1
   ApplyDeathForce: 1
   DeathForce: {x: 0, y: 10}
   ResetForcesOnDeath: 0
@@ -1966,6 +2060,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &625086455510749243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063301938950769036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1508296b0904b1ba069c225eb6482a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RespawnOnPlayerRespawn: 0
+  RepositionToInitOnPlayerRespawn: 1
+  DisableOnKill: 0
+  DisableModelOnKill: 1
+  AutoRespawnDuration: 0
+  AutoRespawnAmount: 3
+  AutoRespawnRemainingAmount: 3
+  IgnoreCheckpointsAlwaysRespawn: 1
+  AssociatedCheckpoints: []
+  RespawnFeedback: {fileID: 0}
 --- !u!1 &7772703089869500688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,6 +2318,7 @@ GameObject:
   - component: {fileID: 2054140072309433397}
   - component: {fileID: 1024621592551882006}
   - component: {fileID: 1138195310723889712}
+  - component: {fileID: 8945317177033404113}
   m_Layer: 0
   m_Name: Tentacle4
   m_TagString: Untagged
@@ -2348,12 +2465,12 @@ MonoBehaviour:
   ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
   DeathFeedbacks: {fileID: 5918534822296538271}
-  DestroyOnDeath: 1
+  DestroyOnDeath: 0
   DelayBeforeDestruction: 0
   CollisionsOffOnDeath: 1
   GravityOffOnDeath: 0
   PointsWhenDestroyed: 0
-  RespawnAtInitialLocation: 0
+  RespawnAtInitialLocation: 1
   ApplyDeathForce: 1
   DeathForce: {x: 0, y: 10}
   ResetForcesOnDeath: 0
@@ -2433,6 +2550,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8945317177033404113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579920155801250894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1508296b0904b1ba069c225eb6482a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RespawnOnPlayerRespawn: 0
+  RepositionToInitOnPlayerRespawn: 1
+  DisableOnKill: 0
+  DisableModelOnKill: 1
+  AutoRespawnDuration: 0
+  AutoRespawnAmount: 3
+  AutoRespawnRemainingAmount: 3
+  IgnoreCheckpointsAlwaysRespawn: 1
+  AssociatedCheckpoints: []
+  RespawnFeedback: {fileID: 0}
 --- !u!1 &8779466456034033491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,7 +2674,19 @@ MonoBehaviour:
     TriggerUnityEvents: 1
     OnPlay:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: MoreMountains.CorgiEngine.Level5Manager, Assembly-CSharp
+          m_MethodName: IcicleCrash
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnPause:
       m_PersistentCalls:
         m_Calls: []
@@ -2667,7 +2818,19 @@ MonoBehaviour:
     TriggerUnityEvents: 1
     OnPlay:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: MoreMountains.CorgiEngine.Level5Manager, Assembly-CSharp
+          m_MethodName: IcicleCrash
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnPause:
       m_PersistentCalls:
         m_Calls: []
