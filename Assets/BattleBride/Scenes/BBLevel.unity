@@ -1400,6 +1400,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114e42e3a352452449696d52b521904b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &57929380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57929378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70d71f81ca592445911bc12728c52ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSceneName: BBLevel
+--- !u!114 &57929381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57929378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5144c0a149486744c92842df0769491d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardConditions:
+  - {fileID: 11400000, guid: 7a22742a5fd68014692ce95d21aafeab, type: 2}
+  - {fileID: 11400000, guid: a19c89f27a7820d49bfc11499a6f8902, type: 2}
+  - {fileID: 11400000, guid: 36442c236153cb342a7a3a3bfde9ab49, type: 2}
+  - {fileID: 11400000, guid: 35473fdb854c86e4cbac0345a09c7420, type: 2}
 --- !u!1001 &58707621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36123,7 +36153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1215848667
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51787,6 +51817,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 57929379}
+    - targetCorrespondingSourceObject: {fileID: 190956, guid: 6059d977d1f210348bfbe1a82f4f9883,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 57929380}
+    - targetCorrespondingSourceObject: {fileID: 190956, guid: 6059d977d1f210348bfbe1a82f4f9883,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 57929381}
   m_SourcePrefab: {fileID: 100100000, guid: 6059d977d1f210348bfbe1a82f4f9883, type: 3}
 --- !u!1 &1697465646
 GameObject:
