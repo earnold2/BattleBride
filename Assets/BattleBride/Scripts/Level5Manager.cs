@@ -118,7 +118,11 @@ namespace MoreMountains.CorgiEngine
 
         private void YouWin()
         {
+            GameTimerManager.Instance.SetVictory();
+
             youWinText.gameObject.SetActive(true);
+
+            VictoryResultsManager.Instance.CalculateRewards();
 
             //maybe play some victory music
 
