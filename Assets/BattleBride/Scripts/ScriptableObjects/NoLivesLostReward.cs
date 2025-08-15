@@ -6,7 +6,7 @@ public class NoLivesLostRewardCondition : RewardCondition
 {
     public override bool CheckRewardCondition()
     {
-        return GameManager.Instance.CurrentLives >= GameManager.Instance.MaximumLives;
+        return GameManager.Instance.CurrentLives == GameManager.Instance.MaximumLives;
     }
 
     public override void GrantReward()
