@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Tools;
 using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
 {
-    public class Level3Manager : MonoBehaviour
+    public class Level3Manager : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     {
         public static Level3Manager instance = null;
 
@@ -26,6 +27,10 @@ namespace MoreMountains.CorgiEngine
         [Header("Groom Puzzle")]
         public GameObject[] treadPlatforms = new GameObject[3];
 
+        //Boss
+        [SerializeField] private List<GameObject> _boss3;
+        private List<Health> _boss3Health = new List<Health>();
+
 
         void Awake()
         {
@@ -45,6 +50,12 @@ namespace MoreMountains.CorgiEngine
             for (int i = 0; i < buttonStatus.Length; i++)
             {
                 buttonStatus[i] = false;
+            }
+
+            //Get boss health
+            foreach(GameObject boss in _boss3)
+            {
+                _boss3Health.Add(boss.GetComponent<Health>());
             }
         }
 
@@ -136,6 +147,36 @@ namespace MoreMountains.CorgiEngine
                     treadPlatforms[i].SetActive(false);
                 }
             }
+        }
+
+        public virtual void OnMMEvent(CorgiEngineEvent gameEvent)
+        {
+            CorgiEngineEventTypes eventName = gameEvent.EventType;
+
+            switch (eventName)
+            {
+                case CorgiEngineEventTypes.Respawn:
+                    ResetBossHealth();
+                    break;
+            }
+        }
+
+        private void ResetBossHealth()
+        {
+            foreach(var health in _boss3Health)
+            {
+                health.Revive();
+            }
+        }
+
+        protected virtual void OnEnable()
+        {
+            this.MMEventStartListening<CorgiEngineEvent>();
+        }
+
+        protected virtual void OnDisable()
+        {
+            this.MMEventStopListening<CorgiEngineEvent>();
         }
     }
 }

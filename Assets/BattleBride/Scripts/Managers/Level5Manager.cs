@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using MoreMountains.Tools;
+using System;
 
 namespace MoreMountains.CorgiEngine
 {
@@ -22,6 +23,9 @@ namespace MoreMountains.CorgiEngine
         public Button MainMenuButton;
         public Button PlayAgainButton;
 
+        [SerializeField] private GameObject _finalBoss;
+        private Health _finalBossHealth;
+
         void Start()
         {
             for (int i = 0; i < icicles.Count; i++)
@@ -29,6 +33,9 @@ namespace MoreMountains.CorgiEngine
                 startPos.Add(icicles[i].transform.localPosition);
                 endPos.Add(icicles[i].transform.localPosition - new Vector3(0, 10, 0));
             }
+
+            //Set Boss Health
+            _finalBossHealth = _finalBoss.GetComponent<Health>();
         }
 
         // Update is called once per frame
@@ -148,8 +155,14 @@ namespace MoreMountains.CorgiEngine
                 case CorgiEngineEventTypes.Respawn:
                     Debug.Log("Respawning 5");
                     ResetTentaclesChallenge();
+                    ResetBossHealth();
                     break;
             }
+        }
+
+        private void ResetBossHealth()
+        {
+            _finalBossHealth.ResetHealthToMaxHealth();
         }
 
         protected virtual void OnEnable()
