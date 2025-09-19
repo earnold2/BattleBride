@@ -5402,7 +5402,7 @@ MonoBehaviour:
   - {fileID: 6769584392560929917, guid: b630544fe7657bc49b9381e35a25604e, type: 3}
   AutoAttributePlayerIDs: 1
   SceneCharacters: []
-  DebugSpawn: {fileID: 357059214}
+  DebugSpawn: {fileID: 305649169}
   CheckpointAttributionAxis: 0
   CheckpointAttributionDirection: 0
   CurrentCheckPoint: {fileID: 0}

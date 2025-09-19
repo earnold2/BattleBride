@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 6255002214136298797}
   - component: {fileID: 6254775563620790717}
   - component: {fileID: 6254805519190335715}
+  - component: {fileID: 3879386612053131840}
   m_Layer: 13
   m_Name: Boss3
   m_TagString: Untagged
@@ -639,7 +640,7 @@ MonoBehaviour:
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
   BrainActive: 1
   ResetBrainOnStart: 1
-  ResetBrainOnEnable: 0
+  ResetBrainOnEnable: 1
   ActionsFrequency: 0
   DecisionFrequency: 0
   RandomizeFrequencies: 0
@@ -906,6 +907,18 @@ MonoBehaviour:
   TestMaxHealth: 100
   TestCurrentHealth: 25
   TestUpdateHealthButton: 0
+--- !u!114 &3879386612053131840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295616233860535489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dea8e48ce8a04c44aa7b6ca4f6d126f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7725643827184159827
 GameObject:
   m_ObjectHideFlags: 0

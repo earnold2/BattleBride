@@ -29,7 +29,7 @@ namespace MoreMountains.CorgiEngine
 
         //Boss
         [SerializeField] private List<GameObject> _boss3;
-        private List<Health> _boss3Health = new List<Health>();
+        //private List<Health> _boss3Health = new List<Health>();
 
 
         void Awake()
@@ -53,10 +53,10 @@ namespace MoreMountains.CorgiEngine
             }
 
             //Get boss health
-            foreach(GameObject boss in _boss3)
+            /*foreach(GameObject boss in _boss3)
             {
                 _boss3Health.Add(boss.GetComponent<Health>());
-            }
+            }*/
         }
 
         // Update is called once per frame
@@ -163,9 +163,17 @@ namespace MoreMountains.CorgiEngine
 
         private void ResetBossHealth()
         {
-            foreach(var health in _boss3Health)
+            foreach(var boss in _boss3)
             {
-                health.Revive();
+                //turn on boss
+                if (!boss.activeSelf)
+                {
+                    boss.SetActive(true);
+                }
+
+                //Reset health and position
+                boss.GetComponent<Health>().Revive();
+                boss.GetComponent<Boss3>().BackToStartPosition();
             }
         }
 
