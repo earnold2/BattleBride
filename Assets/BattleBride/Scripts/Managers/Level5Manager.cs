@@ -26,6 +26,8 @@ namespace MoreMountains.CorgiEngine
         [SerializeField] private GameObject _finalBoss;
         private Health _finalBossHealth;
 
+        [SerializeField] private GameObject antiDeathWall;
+
         void Start()
         {
             for (int i = 0; i < icicles.Count; i++)
@@ -125,6 +127,8 @@ namespace MoreMountains.CorgiEngine
 
         private void YouWin()
         {
+            antiDeathWall.layer = 8;
+
             GameTimerManager.Instance.SetVictory();
 
             youWinText.gameObject.SetActive(true);
