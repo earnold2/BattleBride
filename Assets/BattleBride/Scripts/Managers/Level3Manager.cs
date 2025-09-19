@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Tools;
@@ -29,6 +30,7 @@ namespace MoreMountains.CorgiEngine
 
         //Boss
         [SerializeField] private List<GameObject> _boss3;
+        private bool _isBossDefeated;
         //private List<Health> _boss3Health = new List<Health>();
 
 
@@ -47,6 +49,8 @@ namespace MoreMountains.CorgiEngine
         // Start is called before the first frame update
         void Start()
         {
+            _isBossDefeated = false;
+
             for (int i = 0; i < buttonStatus.Length; i++)
             {
                 buttonStatus[i] = false;
@@ -83,6 +87,25 @@ namespace MoreMountains.CorgiEngine
                 }
             }
 
+            if (!_isBossDefeated)
+            {
+                CheckBossStatus();
+            }
+
+        }
+
+        private void CheckBossStatus()
+        {
+            foreach (var boss in _boss3)
+            {
+                //turn on boss
+                if (boss.activeSelf)
+                {
+                    return;
+                }
+            }
+
+            _isBossDefeated = true;
         }
 
         public void ButtonToggle(int ID)
@@ -163,6 +186,11 @@ namespace MoreMountains.CorgiEngine
 
         private void ResetBossHealth()
         {
+            if (_isBossDefeated)
+            {
+                return;
+            }
+
             foreach(var boss in _boss3)
             {
                 //turn on boss
